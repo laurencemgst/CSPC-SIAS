@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+section {
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: url("../images/CSPCBackground.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.titleHeader {
+    padding-top:1%;
+    font-size: 50px;
+    color: white;
+}
+
+.welcomeUserMessage {
+    color: white;
+}
+
+.divHeader {
+    text-align: center;
+}
+
+.navBar {
+    padding: 10px;
+    text-align: center;
+}
+
+.navBar button {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 20px;
+    background-color: inherit;
+    font-family: inherit;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.navBar button:hover {
+    color: #007bff;
+}
+
+.navBar hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 5px 0;
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown button */
+.dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 20px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px; /* Add curved edges */
+}
+
+/* Links inside the dropdown */
+.dropdown-content button {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+  /* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.logout-button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.logout-button:hover {
+    color: #007bff;
+}
+
+/*  The style for Help Section starts here*/
+.helpContent {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.helpBox {
+    position: relative;
+    background: transparent;
+    border: none;
+    border-radius: 20px;
+    backdrop-filter: blur(15px) brightness(80%);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 15px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/*  The style for Help Section ends here*/
+
+/* Enrollment section stands here */
+.Enrollment {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.EnrollmentForm {
+    position: relative;
+    background: transparent;
+    border: none;
+    border-radius: 20px;
+    backdrop-filter: blur(15px) brightness(80%);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 15px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.firstColumn {
+    padding-right: 150px;
+}
+
+/* Enrollment section ends here */
+
+.btn {
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    color: white;
+}
+
+/* Bootstrap Css Starts here */
+
+.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+.btn-primary:focus, .btn-primary.focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #0056b3;
+    border-color: #004275;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+/* Bootstrap Css ends here */
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Buttons */
+.greenBtn {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.greenBtn:hover {
+  background-color: #45a049; /* Darker Green */
+}
+
+.redBtn {
+  background-color: #f44336; /* Red */
+  border: none;
+  color: white;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.redBtn:hover {
+  background-color: #d32f2f; /* Darker Red */
+}
+
+/* Centering the Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+/* end of confirm modal */
+
+.Term-Grade-Content {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.TG-Box {
+    position: relative;
+    background: transparent;
+    border: none;
+    border-radius: 20px;
+    backdrop-filter: blur(15px) brightness(80%);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 15px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}

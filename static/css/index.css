@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+section {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: url("../images/CSPCBackground.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.itemsAlign {
+    padding-right: 150px;
+}
+
+.form-box {
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: transparent;
+    border: none;
+    border-radius: 20px;
+    backdrop-filter: blur(15px) brightness(80%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.btn {
+    width: 90%;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    transition: background-color 0.3s;
+}
+
+.btn1 {
+    background-color: blue;
+    border: 1px solid white;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+.btn1:hover {
+    background-color: darkblue;
+}
+
+.btn1:last-child {
+    margin-bottom: 0; /* Remove margin from the last button */
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.buttonsNav {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+@media screen and (max-width: 480px) {
+    .form-box {
+        width: 100%;
+        border-radius: 0px;
+    }
+}

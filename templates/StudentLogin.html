@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>CSPC SIAS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+
+<body>
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <img src="{{ url_for('static', filename='images/CSPCLogo.png') }}" style="width: 100px; " class="center">
+                <center>
+                    <h6> Camarines Sur Polytechnic Collges </h6>
+                    <p> Nabua, Camarines Sur </p>
+                </center>
+                <br>
+                <button class="btn student" id="studentBtn">Student</button>
+                <form action="/StudentLogin" method="post">
+                    <div class="inputbox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="text" id="student_number" name="student_number" required>
+                        <label>User ID</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" id="password" name="password" required>
+                        <label>Password</label>
+                    </div>
+                    <button class="btn login">Log In</button>
+                </form>
+                <center><a href="/Forgot-Password" style="color: white;"> Forgot password? </a></center>
+            </div>
+        </div>
+    </section> 
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
+</body>
+
+</html>

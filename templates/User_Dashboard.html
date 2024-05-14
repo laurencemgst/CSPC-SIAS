@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>CSPC SIAS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/UD_css.css') }}">
+</head>
+
+<body>
+    <section>
+        <div class="divHeader">
+            <h1 class="titleHeader">CSPC SIAS</h1>
+            <h4 class="welcomeUserMessage">Welcome, {{ full_name }} !</h4>
+        </div>
+        <div class="navBar">
+            <hr>
+            <div class="dropdown">
+              <button class="dropbtn" id="toggleButtonTransaction">Transaction</button> | 
+              <div class="dropdown-content">
+                <button href="/">Change Password</button> <hr>
+                <button href="/">Student Profile</button> <hr>
+                <button id="toggleButtonEnrollment" onclick="toggleDivEnrollment()">Enrollment</button> <hr>
+                <button href="/">Instructor Evaluation</button>
+              </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn" id="toggleButtonReport">Report</button>  | 
+                <div class="dropdown-content">
+                    <button href="/">Enrolled Subjects</button> <hr>
+                    <button id="toggleButtonTermGrade" onclick="toggleDivTermGrade()">Term Grade</button> <hr>
+                </div>
+            </div>
+            <button id="toggleButton" onclick="toggleDiv()">Help</button>  | 
+            <a href="/logout" class="logout-button">Logout</a>
+            <hr>
+        </div>
+
+        <div class="Enrollment" id="Enrollment" style="display: none;">
+            <center>
+            <form class="EnrollmentForm">
+                <h3 style="padding-bottom: 20px;"> Enrollment </h3>
+                <table border="1">
+                    <tr>
+                        <th> Courses </th>
+                        <th> Select your section </th>
+                    </tr>
+                    <tr>
+                        <td class="firstColumn"> Anti-Selos </td>
+                        <td><input type="radio" id="Anti-Selos" name="Anti-Selos" value="A"> <label for="A">A - T, TH, S (3:00PM - 5:00PM)</label><br></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="radio" id="Anti-Selos" name="Anti-Selos" value="B"> <label for="B">B - M, W, F (7:00AM - 5:00PM)</label><br></td>
+                    </tr>
+                    <tr>
+                        <td class="firstColumn"> Human Computer Interaction </td>
+                        <td><input type="radio" id="HCI" name="HCI" value="A"> <label for="A">A - T, TH, S (10:00AM - 1:00PM)</label><br></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="radio" id="HCI" name="HCI" value="B"> <label for="B">B - M, W, F (7:00AM - 10:00AM)</label><br></td>
+                    </tr>
+                </table>
+                <br>
+                <button id="enrollBtn" type="button" class="btn btn-primary">ENROLL</button>
+            </form>
+            </center>
+        </div>
+
+        <div class="helpContent" id="helpContent" style="display: none;">
+            <div class="helpBox">
+                <center>
+                    <h1> SIAS ONLINE v4.69 </h1>
+                    <h2> Copyright 2024 - 3024 </h2>
+                    <br>
+                    <h5>Chief Architect : Dr. Cecil Dagon, MIT, DIT, MSC, RN</h5>
+                    <h5>Website : pythonanywhere.com</h5>
+                    <h5>Facebook : hhtps://facebook.com/cecil.dagon.7</h5>
+                </center>
+            </div>
+        </div>
+
+        <div class="Term-Grade-Content" id="Term-Grade-Content" style="display: none;">
+            <div class="TG-Box">
+                <center>
+                    <h3 style="padding-bottom: 20px;"> TERM GRADE </h3>
+                    <table border="1">
+                        <tr>
+                            <th> Courses </th>
+                            <th> Midterm Grade </th>
+                            <th> Final Grade </th>
+                        </tr>
+                        <tr>
+                            <th> Anti-Selos </th>
+                            <th> 1.00 </th>
+                            <th> 1.00 </th>
+                        </tr>
+                        <tr>
+                            <th> Human Computer Interaction </th>
+                            <th> 1.00 </th>
+                            <th> 1.00 </th>
+                        </tr>
+                        <tr>
+                            <th> GWA: </th>
+                            <th></th>
+                            <th> 1.00 </th>
+                        </tr>
+                    </table>
+                </center>
+            </div>
+        </div>
+    </section>
+
+    <div id="confirmationModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Are you sure you want to Enroll?</p>
+        <button id="confirmBtn" class="greenBtn">Yes</button>
+        <button id="cancelBtn" class="redBtn">Cancel</button>
+      </div>
+    </div>
+
+    <div id="successModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>CONGRATULATIONS! You have enrolled yourself. Once we evaluate your Enrollment, you will be officially enrolled.</p>
+        <button class="greenBtn" onclick="redirectToPrintPage()">Print</button>
+        <button id="closeSuccessBtn" class="greenBtn">Close</button>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/UD_js.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+/* Add any print-specific styles here if needed */
+@media print {
+    body {
+        font-size: 12pt;
+        color: #000;
+        background: #fff;
+    }
+
+    .print-content {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+}

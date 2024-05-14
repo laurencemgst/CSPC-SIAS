@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/print.css') }}">
+    <style>
+        /* Add any additional styles for the print page here */
+        @media print {
+            /* Ensure all content is visible in print */
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, sans-serif;
+            }
+            .print-content {
+                margin: 20px;
+            }
+        }
+    </style>
+</head>
+<body onload="window.print()">
+    <div class="print-content">
+        <center>
+            <h1>This is your Certificate of Enrollment</h1>
+            <p>This content is specifically formatted for printing.</p>
+        </center>
+    </div>
+</body>
+</html>
